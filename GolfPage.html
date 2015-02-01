@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+		<link rel="stylesheet" type="text/css" href="GolfAscii.css">
+        <script type="text/javascript" src="GolfClasses.js"></script>
+        <script type="text/javascript" src="GolfScript.js"></script>
+    </head>
+    <body>
+        <div>
+            <h1>Golf Solitaire with text art</h1>
+            <p> Try to clear the table of cards by putting the bottom cards from the table in the waste deck 
+                (It's the bottom deck with the face up). You can click the sellection deck (the one with the face down) to put a random card in the waste deck.
+                If you run out of cards in the selecton deck you lose.</p>
+            <p> Restart the game by refreshing the page.</p>
+                    
+        <table>
+            <tr style="height: 250px">
+                <td id="table0"></td>
+                <td id="table1"></td>
+                <td id="table2"></td>
+                <td id="table3"></td>
+                <td id="table4"></td>
+                <td id="table5"></td>
+                <td id="table6"></td>
+            </tr>
+            <tr style="height: 70px">
+                <td id="selplace">
+<pre>
+  ___
+||###|
+||###|
+||###|</pre>
+                </td>
+                <td id="wastedeck" ></td> 
+            </tr>
+        </table>
+        <p> Made by: Cristian Damian </p>
+        <p> This Game uses ejm's Cards: 
+            <a href="http://ascii.co.uk/art/cards">http://ascii.co.uk/art/cards</a> </p>
+        </div>
+       
+<div id="Cards"> 
+
+<!--Full cards -->
+<pre id="AC">
+ ___ 
+|A  |
+| O |
+|O,O|</pre>
+<pre id="2C">
+ ___ 
+|2  |
+| O |
+|O,O|</pre>
+<pre id="3C">
+ ___ 
+|3  |
+| O |
+|O,O|</pre>
+<pre id="4C">
+ ___ 
+|4  |
+| O |
+|O,O|</pre>
+<pre id="5C">
+ ___ 
+|5  |
+| O |
+|O,O|</pre>
+<pre id="6C">
+ ___ 
+|6  |
+| O |
+|O,O|</pre>
+<pre id="7C">
+ ___ 
+|7  |
+| O |
+|O,O|</pre>
+<pre id="8C">
+ ___ 
+|8  |
+| O |
+|O,O|</pre>
+<pre id="9C">
+ ___ 
+|9  |
+| O |
+|O,O|</pre>
+<pre id="10C">
+ ___ 
+|10 |
+| O |
+|O,O|</pre>
+<pre id="JC">
+ ___ 
+|J  |
+| O |
+|O,O|</pre>
+<pre id="QC">
+ ___ 
+|Q  |
+| O |
+|O,O|</pre>
+<pre id="KC">
+ ___ 
+|K  |
+| O |
+|O,O|</pre>
+<pre id="AH">
+ ___ 
+|A  |
+|(`)|
+|_\_|</pre>
+<pre id="2H">
+ ___ 
+|2  |
+|(`)|
+|_\_|</pre>
+<pre id="3H">
+ ___ 
+|3  |
+|(`)|
+|_\_|</pre>
+<pre id="4H">
+ ___ 
+|4  |
+|(`)|
+|_\_|</pre>
+<pre id="5H">
+ ___ 
+|5  |
+|(`)|
+|_\_|</pre>
+<pre id="6H">
+ ___ 
+|6  |
+|(`)|
+|_\_|</pre><pre id="7H">
+ ___ 
+|7  |
+|(`)|
+|_\_|</pre><pre id="8H">
+ ___ 
+|8  |
+|(`)|
+|_\_|</pre><pre id="9H">
+ ___ 
+|9  |
+|(`)|
+|_\_|</pre><pre id="10H">
+ ___ 
+|10 |
+|(`)|
+|_\_|</pre><pre id="JH">
+ ___ 
+|J  |
+|(`)|
+|_\_|</pre><pre id="QH">
+ ___ 
+|Q  |
+|(`)|
+|_\_|</pre><pre id="KH">
+ ___ 
+|K  |
+|(`)|
+|_\_|</pre><pre id="AS">
+ ___ 
+|A  |
+| ^ |
+|(,)|</pre><pre id="2S">
+ ___ 
+|2  |
+| ^ |
+|(,)|</pre><pre id="3S">
+ ___ 
+|3  |
+| ^ |
+|(,)|</pre><pre id="4S">
+ ___ 
+|4  |
+| ^ |
+|(,)|</pre><pre id="5S">
+ ___ 
+|5  |
+| ^ |
+|(,)|</pre><pre id="6S">
+ ___ 
+|6  |
+| ^ |
+|(,)|</pre><pre id="7S">
+ ___ 
+|7  |
+| ^ |
+|(,)|</pre><pre id="8S">
+ ___ 
+|8  |
+| ^ |
+|(,)|</pre><pre id="9S">
+ ___ 
+|9  |
+| ^ |
+|(,)|</pre><pre id="10S">
+ ___ 
+|10 |
+| ^ |
+|(,)|</pre><pre id="JS">
+ ___ 
+|J  |
+| ^ |
+|(,)|</pre><pre id="QS">
+ ___ 
+|Q  |
+| ^ |
+|(,)|</pre><pre id="KS">
+ ___ 
+|K  |
+| ^ |
+|(,)|</pre><pre id="AD">
+ ___ 
+|A  |
+| /\|
+|_\/|</pre><pre id="2D">
+ ___ 
+|2  |
+| /\|
+|_\/|</pre><pre id="3D">
+ ___ 
+|3  |
+| /\|
+|_\/|</pre><pre id="4D">
+ ___ 
+|4  |
+| /\|
+|_\/|</pre><pre id="5D">
+ ___ 
+|5  |
+| /\|
+|_\/|</pre><pre id="6D">
+ ___ 
+|6  |
+| /\|
+|_\/|</pre><pre id="7D">
+ ___ 
+|7  |
+| /\|
+|_\/|</pre><pre id="8D">
+ ___ 
+|8  |
+| /\|
+|_\/|</pre><pre id="9D">
+ ___ 
+|9  |
+| /\|
+|_\/|</pre><pre id="10D">
+ ___ 
+|10 |
+| /\|
+|_\/|</pre><pre id="JD">
+ ___ 
+|J  |
+| /\|
+|_\/|</pre><pre id="QD">
+ ___ 
+|Q  |
+| /\|
+|_\/|</pre><pre id="KD">
+ ___ 
+|K  |
+| /\|
+|_\/|</pre><pre id="jok">
+ ___ 
+|JOK|
+|^%^|
+|___|</pre>
+
+<!-- Half cards-->
+<pre id="A">
+ ___ 
+|A  |</pre>
+<pre id="2">
+ ___ 
+|2  |</pre>
+<pre id="3">
+ ___ 
+|3  |</pre>
+<pre id="4">
+ ___ 
+|4  |</pre>
+<pre id="5">
+ ___ 
+|5  |</pre>
+<pre id="6">
+ ___ 
+|6  |</pre>
+<pre id="7">
+ ___ 
+|7  |</pre>
+<pre id="8">
+ ___ 
+|8  |</pre>
+<pre id="9">
+ ___ 
+|9  |</pre>
+<pre id="10">
+ ___ 
+|10 |</pre>
+<pre id="J">
+ ___ 
+|J  |</pre>
+<pre id="Q">
+ ___ 
+|Q  |</pre>
+<pre id="K">
+ ___ 
+|K  |</pre>
+
+</div>    
+    </body>
+</html>

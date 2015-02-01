@@ -1,0 +1,29 @@
+
+body{font-family: monospace;
+	font-size: 14px;
+	color: #b6ff00;
+	background-color: #000;
+}
+a{
+	color: #f00;
+} 
+tr{
+	height: 250px;
+}
+td{
+	width: 60px;
+	vertical-align: top;
+	cursor: pointer;                 
+}            
+div{
+	width: 600px;
+}
+pre{
+	margin: 0px 0px 0px 0px; 
+	padding: 0px 0px 0px 0px;             
+}
+#Cards{
+	display: none
+}
+			
+             
